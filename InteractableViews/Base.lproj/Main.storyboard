@@ -20,61 +20,48 @@
                                 <rect key="frame" x="20" y="79" width="353" height="719"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="ebA-10-BGT">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHv-cN-dca">
-                                                <rect key="frame" x="0.0" y="0.0" width="157" height="34"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHv-cN-dca" customClass="IButton" customModule="InteractableViews" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="157" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="testButton1_Id" label="TestButton1"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button w/ A"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHa-8U-aMp">
-                                                <rect key="frame" x="196" y="0.0" width="157" height="34"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHa-8U-aMp" customClass="IButton" customModule="InteractableViews" customModuleProvider="target">
+                                                <rect key="frame" x="196" y="0.0" width="157" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button w/o A"/>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="2im-cl-ukS"/>
+                                        </constraints>
                                     </stackView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gc3-Pj-MRI">
-                                        <rect key="frame" x="0.0" y="76" width="353" height="128"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gc3-Pj-MRI" customClass="ITextView" customModule="InteractableViews" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="82" width="353" height="489"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <accessibility key="accessibilityConfiguration" identifier="testTextViewId" label="TestTextView"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="fsL-xa-uKq"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="fsL-xa-uKq"/>
                                         </constraints>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gRi-U9-FZ6">
-                                        <rect key="frame" x="0.0" y="246" width="353" height="325"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="QX3-CM-Qv3"/>
-                                        </constraints>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="JyJ-Ea-ySK">
-                                                <rect key="frame" x="0.0" y="50" width="353" height="43.666667938232422"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JyJ-Ea-ySK" id="7Md-cc-Qjb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="43.666667938232422"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                        </prototypes>
-                                    </tableView>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BU5-NZ-9Hz">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BU5-NZ-9Hz" customClass="ITextField" customModule="InteractableViews" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="613" width="353" height="32"/>
+                                        <accessibility key="accessibilityConfiguration" label="TestLabel"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="EyZ-Ib-u8f"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XjY-Ad-GMG">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XjY-Ad-GMG" customClass="ISlider" customModule="InteractableViews" customModuleProvider="target">
                                         <rect key="frame" x="-2" y="687" width="357" height="33"/>
                                         <accessibility key="accessibilityConfiguration" identifier="testSliderId" label="TestSlider"/>
                                         <constraints>
@@ -93,6 +80,13 @@
                             <constraint firstItem="1n9-QC-bLt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tQM-tF-Y8o"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonWithAccessability" destination="DHv-cN-dca" id="nKu-v0-WWs"/>
+                        <outlet property="buttonWithoutAccessability" destination="fHa-8U-aMp" id="VfB-Lb-2cl"/>
+                        <outlet property="slider" destination="XjY-Ad-GMG" id="SPr-aB-5kg"/>
+                        <outlet property="textField" destination="BU5-NZ-9Hz" id="q5N-Rq-sMg"/>
+                        <outlet property="textView" destination="gc3-Pj-MRI" id="7dq-nn-fxI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
