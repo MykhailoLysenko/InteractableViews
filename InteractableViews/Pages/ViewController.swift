@@ -7,41 +7,15 @@
 
 import UIKit
 
-//enum Interaction {
-//    case tap
-//    case scroll
-//    case swipe
-//}
-
-protocol InteractableView {
-    var name: String? { get set } // for printing purposes
-//    var interactionType: Interaction { get }
-    
-}
-extension InteractableView {
-    var name: String { "undefined" }
-}
-
-class IButton: UIButton, InteractableView {
-    var name: String?
-}
-class ITextView: UITextView, InteractableView {
-    var name: String?
-}
-class ITextField: UITextField, InteractableView {
-    var name: String?
-}
-class ISlider: UISlider, InteractableView {
-    var name: String?
-}
-
 class ViewController: UIViewController {
+    // MARK: - Properties
     @IBOutlet private var buttonWithoutAccessability: IButton!
     @IBOutlet private var buttonWithAccessability: IButton!
     @IBOutlet private var textView: ITextView!
     @IBOutlet private var textField: ITextField!
     @IBOutlet private var slider: ISlider!
 
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -54,6 +28,7 @@ class ViewController: UIViewController {
         logInteractable(views: interactableViews)
     }
     
+    // MARK: - Setup
     private func setupNames() {
         buttonWithAccessability.name = "buttonWithAccessability"
         buttonWithoutAccessability.name = "buttonWithoutAccessability"
@@ -61,7 +36,10 @@ class ViewController: UIViewController {
         textField.name = "textField"
         slider.name = "slider"
     }
-    
+}
+
+// MARK: - InteractableView Job
+extension ViewController {
     private func fetchInteractableViews() -> [UIView] {
         let subviews = getSubviewsOfView(view: view)
         return subviews.filter { $0 is InteractableView }
@@ -78,8 +56,10 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-    // MARK: - Helpers
+}
+
+// MARK: - Helpers
+extension ViewController {
     func getSubviewsOfView(view: UIView) -> [UIView] {
         var subviewArray = [UIView]()
         if view.subviews.count == 0 {
@@ -92,4 +72,3 @@ class ViewController: UIViewController {
         return subviewArray
     }
 }
-
